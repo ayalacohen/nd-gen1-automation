@@ -1,0 +1,744 @@
+{
+  "version": {
+    "major": 1,
+    "minor": 17,
+    "patch": 3
+  },
+  "common": {
+    "cmn_text_start_treatment": "Behandlung vorbereiten",
+    "cmn_text_pump_status": "Pumpenstatus",
+    "cmn_text_guidance": "Video-Tutorials",
+    "cmn_text_pump_status_title": "Pumpenstatus",
+    "cmn_text_activate": "Aktivieren",
+    "cmn_text_yes": "Ja",
+    "cmn_text_no": "Nein",
+    "cmn_text_ok": "OK",
+    "cmn_text_cancel": "Abbrechen",
+    "cmn_text_close": "Schließen",
+    "cmn_text_next": "Weiter",
+    "cmn_text_retry": "RETRY",
+    "cmn_text_show_me": "SHOW ME",
+    "cmn_text_done": "Fertig",
+    "cmn_please_wait": "Bitte warten.",
+    "cmn_go_back": "Zurück",
+    "cmn_pump": "Pumpe",
+    "cmn_unpair": "UNPAIR",
+    "cmn_get_started": "Starten",
+    "cmn_treatment_ending": "Verbleibende Behandlung",
+    "cmn_text_replace": "Ersetzen",
+    "cmn_text_turn_off": "Ausschalten",
+    "cmn_text_adjust_value": "Wert anpassen",
+    "cmn_text_try_again": "Erneut versuchen",
+    "cmn_action_finished": "Gut gemacht!",
+    "cmn_insert_pump": "Pumpe einsetzen",
+    "cmn_insert_pump_more_info": "Setzen Sie die Pumpe in die Pumpenhalterung ein.",
+    "cmn_pump_detected": "Pumpe erkannt",
+    "cmn_loading_wait": "Ladevorgang, bitte warten",
+    "cmn_loading": "Ladevorgang",
+    "cmn_regimen_activate_changes": "Schema aktivieren",
+    "cmn_regimen_edit_changes": "Schema bearbeiten",
+    "cmn_regimen_save_changes": "Schema speichern",
+    "cmn_find_pump": "Pumpe suchen",
+    "cmn_time_period_AM": "AM",
+    "cmn_text_stop": "Stopp",
+    "cmn_text_reconnect": "Erneut verbinden",
+    "cmn_text_abort_process": "Vorgang abbrechen",
+    "cmn_text_connect": "CONNECT",
+    "cmn_resume_process": "Vorgang fortsetzen",
+    "cmn_set_up": "Einrichten",
+    "cmn_pump_time": "Uhrzeit bestätigen",
+    "cmn_time_settings": "Zeit und Datum bearbeiten",
+    "cmn_regimen": "Regimen",
+    "cmn_regimen_segments": "Regimen segments",
+    "cmn_time_min": "Min.",
+    "cmn_time_hrs": "Std.",
+    "cmn_start_filling": "Befüllung starten",
+    "cmn_establishing_connection": "Verbindung wird hergestellt",
+    "cmn_regimen_activated": "Änderungen des Dosierungsschemas gespeichert",
+    "cmn_regimen_activated_success": "You have activated your regimen",
+    "cmn_connect_phone": "Connect phone",
+    "cmn_home": "Startseite",
+    "alert_fw_build_version": "Android build version should be updated!\nRequired: ",
+    "cmn_current": "Current: ",
+    "cmn_api_version": "API version: ",
+    "cmn_pump_i": "Pump: ",
+    "cmn_app": "; App: ",
+    "cmn_id": "ID: ",
+    "cmn_com_error": "Com Error ID: ",
+    "cmn_gatt_error": "GATT ERROR: ",
+    "cmn_text_empty_sn": "Empty S/N",
+    "cmn_battery_status_percentage": "%d %%",
+    "text_pause_audio": "AUDIO ANHALTEN",
+    "text_pause_audio_ack": "AUDIO ANGEHALTEN",
+    "text_turn_off_audio": "AUDIO AUSSCHALTEN",
+    "text_turn_off_audio_ack": "AUDIO AUS",
+    "cmn_prev_date": "Zurück",
+    "cmn_next_date": "Weiter",
+    "cmn_1": "1",
+    "cmn_2": "2",
+    "cmn_3": "3"
+  },
+  "screens": {
+    "SPLASH": {
+      "splash_screen_copyright": "Copyright © 2025",
+      "splash_fw_version": "FW version: %1$s",
+      "splash_sw_version": "SW version: %1$s",
+      "splash_sw_hcp_version_label": "",
+      "splash_hcp_warning_label": ""
+    },
+    "LANGUAGE": {
+      "title_select_language": "Bitte wählen Sie Ihre Sprache\n"
+    },
+    "FTU_STARTUP": {
+      "title_start_up_ftu": "Erste Schritte",
+      "title_start_up_pair_new_pump": "Pair new pump",
+      "ftu_set_date_time": "Datum und Uhrzeit einstellen",
+      "ftu_set_date_time_prepared": "Datum und Uhrzeit sind eingestellt",
+      "ftu_lets_set_time": "Stellen Sie das Datum und die Uhrzeit für Ihre Kontrollstation ein",
+      "ftu_date_set": "Datum ist eingestellt",
+      "ftu_time_set": "Uhrzeit ist eingestellt",
+      "pair_pump_ftu": "Pumpe koppeln",
+      "pair_pump_ftu_prepared": "Pumpe ist verbunden",
+      "ftu_lets_pair_pump": "Verbinden Sie Ihre Pumpe mit der Kontrollstation.",
+      "set_regimens_title": "Dosierungsschema einrichten",
+      "ftu_lets_set_regimen": "Richten Sie das Dosierungsschema ein."
+    },
+    "DATE_TIME": {
+      "ftu_select_month": "Monat einstellen",
+      "ftu_select_date": "Tag einstellen",
+      "ftu_select_year": "Jahr einstellen",
+      "ftu_select_date_info": "Tippen Sie auf Monat, Tag oder Jahr.\n\nMit den Schaltflächen + und - stellen Sie das Datum ein.",
+      "ftu_set_date": "Datum einstellen",
+      "ftu_set_time": "Uhrzeit einstellen",
+      "ftu_select_time": "Uhrzeit einstellen",
+      "ftu_select_time_info": "Um die Uhrzeit einzustellen, tippen Sie auf die Schaltflächen + und - oder verwenden Sie das Tastenfeld.",
+      "ftu_select_time_info_regular": "Um die Uhrzeit einzustellen, tippen Sie auf die Schaltflächen + und - oder verwenden Sie das Tastenfeld.",
+      "info_menu_set_time_date": "Stellen Sie das Datum und die Uhrzeit ein."
+    },
+    "FTU_PUMP_LIST": {
+      "ftu_pump_list_title": "Wählen Sie Ihre Pumpe aus",
+      "ftu_pump_list_title_search": "Wählen Sie Ihre Pumpe",
+      "ftu_pump_list_info_search": "Bitte warten. Dies kann bis zu %1$d Sekunden in Anspruch nehmen.",
+      "ftu_pump_list_info_ble_turning_on": "Bluetooth wird aktiviert."
+    },
+    "FTU_PUMP_PAIRING": {
+      "ftu_pump_pair_title": "Rückmeldung der Pumpe",
+      "ftu_pump_pair_title_pairing": "Pumpe wird gekoppelt",
+      "ftu_pump_pair_title_completed": "Kopplung abgeschlossen",
+      "ftu_pump_pair_info_is_vibrated": "Hat Ihre Pumpe vibriert und gepiept?\n\nDie Rückmeldung kann bis zu 30 Sekunden dauern."
+    },
+    "ESTABLISHING_THE_CONNECTION": {
+      "screen_establishing_the_connection_title": "Verbindung wird hergestellt",
+      "screen_establishing_the_connection_info": "Ladevorgang, bitte warten"
+    },
+    "REGIMEN_OVERVIEW": {
+      "title_single_regimen_overview": "Übersicht Dosierungsschema",
+      "regimen_daily_total_title": "Gesamte Tagesdosis des Schemas",
+      "regimen_daily_total_flow": "%1$.0f",
+      "regimen_daily_total_unit": "%1$s",
+      "regimen_edit_first_label": "Startzeit der \nTagesrate",
+      "regimen_edit_second_label": "Gesamte\nTagesdosis",
+      "regimen_edit_nigh_segment": "Beginn Nachtrate: %1$s",
+      "regimen_edit_am_label": "AM",
+      "title_single_regimen_edit": "Dosierungsschema bearbeiten",
+      "text_single_regimen_edit_info_panel": "Die Tagesrate beginnt in der Regel 3 Stunden vor dem Aufwachen des Patienten.",
+      "regiment_segment_start_text": "Beginn",
+      "regiment_segment_end_text": "Ende",
+      "regiment_segment_flow_text_fix": "Dosis",
+      "regiment_segment_flow_text_unit": "mg",
+      "regiment_segment_flow_day_text_unit": "mg/Tag",
+      "regiment_segment_flow_day_text_unit_night": "mg/Nacht",
+      "regiment_segment_flow_info": "Die Tagesrate beginnt in der Regel 3 Stunden vor dem Aufwachen des Patienten.",
+      "regiment_segment_duration": "%1$d h",
+      "regimen_disclaimer": ""
+    },
+    "FTU_SYNC_DATA": {
+      "ftu_sync_data_title": "Daten werden synchronisiert",
+      "regimen_download_screen_title": "Verbindung wird hergestellt"
+    },
+    "REGIMEN_MENU": {
+      "regimen_pin_title": "PIN medizinische Fachkraft",
+      "regiment_wrong_pin": "Falsche PIN. Bitte versuchen Sie es erneut.",
+      "regiment_enter_pin": "Geben Sie Ihre PIN ein",
+      "regiment_note": "Medizinische Fachkraft: Geben Sie bitte Ihre PIN ein."
+    },
+    "BASAL_UPLOAD": {
+      "basal_upload_screen_title": "Änderungen werden gespeichert",
+      "basal_upload_screen_content": "Bitte warten. \nDies kann bis zu 30 Sekunden in \nAnspruch nehmen."
+    },
+    "FTU_SETUP_DONE": {
+      "set_up_done_title": "Einrichtung abgeschlossen"
+    },
+    "MENU": {
+      "menu": "Menü",
+      "menu_group_filling_station": "Allgemeine Einstellungen",
+      "menu_item_set_date": "Datum und Uhrzeit",
+      "menu_item_set_language": "Sprache",
+      "menu_connected_devices": "Verbundene Geräte",
+      "menu_group_pump_settings": "Behandlungseinstellungen",
+      "menu_item_regimen_settings": "Dosierungsschema-Einstellungen",
+      "menu_item_unpair_pump": "Unpair pump",
+      "menu_item_pump_control": "Pumpen-Einstellungen",
+      "menu_item_history_log": "Treatment history",
+      "menu_item_unpair_smartphone": "Disconnect smartphone",
+      "menu_group_about": "Über",
+      "menu_item_version_details": "Versionsdetails",
+      "menu_item_privacy": "Datenschutzbestimmungen",
+      "menu_item_cs_control": "Control station",
+      "menu_group_help": "Hilfe",
+      "menu_item_customer_care_number": "Kundendienst",
+      "menu_item_additional_guidance": "Video-Tutorials"
+    },
+    "TREATMENT_HISTORY": {
+      "treatment_history_screen_title": "Treatment history",
+      "treatment_history_screen_info": "Select from previous logs or \ndownload a new one.",
+      "treatment_history_screen_info_uncoupled": "Insert the pump into the \ncontrol station in order to download history.",
+      "treatment_history_screen_action_download": "DOWNLOAD LOG",
+      "treatment_history_screen_action_filter": "FILTER LOG",
+      "treatment_history_screen_action_filter_clear": "CLEAR FILTER",
+      "treatment_history_info_no_connection": "Pump is not connected. ",
+      "treatment_history_label_status": "Status:",
+      "treatment_history_info_unknown_status": " ",
+      "treatment_history_label_count": "Count:",
+      "treatment_history_label_size": "Size:",
+      "treatment_history_info_no_value": "--",
+      "treatment_history_dialog_loading_tittle": "Bitte warten",
+      "treatment_history_dialog_loading_info": "Loading saved Treatment history",
+      "treatment_history_dialog_loading_info_types": "Loading types",
+      "treatment_history_dialog_loading_info_groups": "Loading groups",
+      "treatment_history_info_download_not_started": "Not Started"
+    },
+    "PUMP_CONTROL": {
+      "pump_model": "Pump model",
+      "pump_name": "Pumpenname",
+      "pump_firmware_version": "Version",
+      "pump_key": "Kommunikationsschlüssel anzeigen",
+      "pump_configuration_version": "Konfigurationsversion",
+      "pump_turn_off_caution": "Achtung! Durch das Ausschalten\nder Pumpe wird Ihre Behandlung\nunterbrochen."
+    },
+    "TURN_OFF_PUMP": {
+      "menu_item_turn_off_pump": "Pumpe ausschalten",
+      "turned_off_pump_title": "Pumpe ist ausgeschaltet",
+      "turning_off_pump_title": "Pumpe wird ausgeschaltet"
+    },
+    "SETTINGS_CONNECTED_DEVICES": {
+      "settings_connected_devices_title": "Verbundene Geräte",
+      "settings_connected_devices_panel": "Wählen Sie eine Aktion aus.",
+      "settings_connected_devices_pair_pump": "Pumpe koppeln"
+    },
+    "SETTINGS_CS_CONTROL": {
+      "settings_cs_control_view_logs": "Behandlungshistorie einsehen",
+      "settings_cs_control_view_logs_title": "Control Station logs"
+    },
+    "ABOUT_SCREENS": {
+      "about_title": "Versionsdetails",
+      "about_privacy_policy_update": " ",
+      "about_enter_text": "KEINE INFO",
+      "about_patient_configuration": "Patient version",
+      "about_hcp_configuration": "Healthcare professional version",
+      "about_digital_health_features": "QR-Code - Für weitere Informationen wenden Sie sich bitte an den Kundendienst",
+      "about_switch_button_on": "An",
+      "about_switch_button_off": "Aus",
+      "about_cs_sn": "Kontrollstation Seriennummer",
+      "about_cs_sw": "Kontrollstation SW-Version",
+      "about_cs_sw_configuration": "Softwarekonfiguration",
+      "about_cs_fw": "Kontrollstation FW-Version",
+      "about_cs_cfg_file": "Konfigurationsdatei Version",
+      "about_comm_version": "Kommunikation Version",
+      "about_filling_cycle_count": "Anzahl der durchgeführten Zyklen",
+      "about_pump_ftu_date": "Pumpe FTU-Datum",
+      "about_cs_ftu_date": "Kontrollstation FTU-Datum",
+      "about_no_info": "KEINE INFO",
+      "about_cs_config_ver": "Version:",
+      "about_cs_config_sub_ver": "sub-version",
+      "privacy_policy_title": "Datenschutzbestimmungen"
+    },
+    "PUMP_STATUS": {
+      "pump_status_title": "Pumpenstatus",
+      "status_screen_levodopa_delivered": "LEVODOPA ABGEGEBEN",
+      "status_screen_no_delivery": "Keine Abgabe",
+      "remaining_pump_battery": "Akkustatus",
+      "remaining_pump_battery_title": "Pumpe",
+      "status_screen_disclaimer": "Der Dosierungsstatus wird im nächsten Behandlungszyklus automatisch aktualisiert."
+    },
+    "PUMP_NOT_IN_RANGE": {
+      "not_in_range_screen_info_1": "Die Pumpe kann nicht gefunden werden. Versuchen Sie, Ihre Pumpe\nzu suchen/koppeln.",
+      "not_in_range_screen_info_2": "Wenn das Problem weiterhin besteht, wenden Sie sich bitte an den Kundendienst.",
+      "not_in_range_screen_action_search": "Pumpe suchen"
+    },
+    "REMOVE_OLD_DISPOSABLE": {
+      "remove_old_disposable_title": "Entsorgung von gebrauchten Materialien",
+      "remove_old_disposable_instruction_first": "Trennen Sie die Kartusche\nvon der Pumpe",
+      "remove_old_disposable_instruction_second": "Entfernen Sie die Kanülen,\n drücken Sie die Infusions-\nstellen zusammen und reinigen\nSie diese",
+      "remove_old_disposable_instruction_third": "Entsorgen Sie die Kartusche\n und Infusionssets"
+    },
+    "CONNECT_A_NEW_CARTRIDGE": {
+      "connect_new_cartridge_title": "Eine neue Kartusche anschließen",
+      "connect_new_cartridge_info": "Öffnen Sie eine neue Kartusche und verbinden Sie sie mit der Pumpe"
+    },
+    "CONNECT_VIAL": {
+      "connect_vial_screen_title": "Durchstechflaschen einsetzen",
+      "connect_vial_screen_info_second": "Drehen Sie jede Dstfl. 5-mal und überprüfen Sie die Lösung.",
+      "connect_vial_screen_info_third": "Entfernen Sie die Kappen und setzen Sie die zwei Dstfl. so ein, dass sie nach unten zeigen und mit einem KLICKEN einrasten.",
+      "connect_vial_screen_info_third_special": "Klickgeräusch"
+    },
+    "PREPARE_FOR_FILLING": {
+      "prepare_for_filling_screen": "Medikament auffüllen",
+      "prepare_for_filling_message": "Stellen Sie sicher, dass die 2 Durchstechflaschen (Dstfl.) richtig eingesetzt sind.\n\nTippen Sie auf die Schaltfläche unten, um den Befüllungsvorgang des Medikaments zu starten.\n"
+    },
+    "FILLING_MEDICATION": {
+      "filling_medication_ftu": "Medikament auffüllen",
+      "text_filling_cartridge_full": "Kartusche ist voll.",
+      "text_filling_process_eta": "Dieser Vorgang dauert etwa 7 Minuten.",
+      "filling_medication_ask": "Bitte Pumpe nicht entfernen"
+    },
+    "CONNECT_TUBING_SCREEN": {
+      "connect_tubing_title": "Infusionssets anschließen",
+      "connect_tubing_info_first": "Öffnen Sie 2 Infusionssets und schrauben Sie die Schläuche an.",
+      "connect_tubing_info_second": "Die Schläuche müssen richtig befestigt sein.",
+      "connect_tubing_info_third": "Entfernen Sie den weißen Schutzfilm.",
+      "connect_tubing_prime_button": "Schläuche entlüften"
+    },
+    "PREPARE_INFUSION_SITES": {
+      "screen_prepare_infusion_sites_title": "Infusionsstellen vorbereiten",
+      "screen_prepare_infusion_sites_message_first": "Wählen Sie eine\nInfusionsstelle",
+      "screen_prepare_infusion_sites_message_second": "Bereiten Sie die\n Desinfektionstücher vor",
+      "screen_prepare_infusion_sites_message_third": "Desinfizieren Sie die\nInfusionsstelle",
+      "screen_prepare_infusion_sites_button": "Wahl einer Infusionsstelle"
+    },
+    "INSERT_CANNULA": {
+      "insert_cannula_screen_title": "Setzen der Kanülen",
+      "insert_cannula_screen_info_first": "Ziehen Sie das Papier vom\nKlebestreifen und entfernen\n Sie die Schutzvorrichtung",
+      "insert_cannula_screen_info_second": "Straffen Sie die Haut,\npositionieren Sie die Setz-\nhilfe und drücken Sie\n die rote Taste",
+      "insert_cannula_screen_info_third": "Glätten Sie den\n Klebestreifen"
+    },
+    "CONNECT_TUBES": {
+      "connect_tubes_screen_title": "Schläuche mit Kanülen verbinden",
+      "connect_tubes_screen_info_first": "Entfernen Sie das weiße\nKlebeband von den\nSchläuchen",
+      "connect_tubes_screen_info_second": "Rollen Sie die Schläuche\nvorsichtig aus, \nohne dass sie knicken\noder verheddern",
+      "connect_tubes_screen_info_third": "Legen Sie einen Finger auf das\nKanülengehäuse und führen \nSie das Verbindungsstück ein"
+    },
+    "CHARGING": {
+      "charging_screen_title": "Pumpen-Akku laden",
+      "charging_screen_info": "Bitte laden Sie den Akku, bis alle vier Balken angezeigt werden. Das bedeutet, dass der Akku vollständig aufgeladen ist.",
+      "charging_screen_done_info": "Ihre Pumpe ist geladen und befüllt. Sie können die Pumpe nun entfernen."
+    },
+    "PUMP_READY": {
+      "remove_pump_screen_title": "Pumpe entfernen",
+      "remove_pump_screen_info": "Entfernen Sie die Pumpe aus der Pumpenhalterung.",
+      "pump_ready_screen_title": "Beginn der Medikamentenabgabe",
+      "pump_ready_screen_info_first": "Drücken Sie die Pumpentaste, um mit der Medikamentenabgabe zu beginnen.\n\nDie Abgabe erfolgt, sobald das gelb blinkende Licht grün wird."
+    },
+    "HOME": {
+      "home_title": "Startseite",
+      "home_screen_waiting_connection": "Verbindungsaufbau",
+      "home_screen_waiting_connection_content": "Falls dies zu lange dauert, vergewissern Sie sich, dass sich die Pumpe in der Nähe befindet bzw. setzen Sie sie in die Halterung ein.",
+      "home_screen_medication_delivery_on": "Die Medikamentenabgabe LÄUFT.",
+      "home_screen_action_pump_delivering_started": "Die Pumpe gibt das Medikament ab.",
+      "home_screen_action_prepare_treatment": "prepare treatment earlier.",
+      "home_screen_action_pump_status": "Pumpenstatus"
+    },
+    "CONTACT_US": {
+      "contact_us_tittle": "Kontakt",
+      "contact_us_care_number_label": "",
+      "contact_us_care_number": "Kontakt- und Support-Informationen finden Sie im Benutzerhandbuch",
+      "contact_us_email_label": "",
+      "contact_us_email": "",
+      "contact_us_website_label": "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+      "contact_us_website": ""
+    },
+    "REMOVE_VIAL_ADAPTERS": {
+      "remove_vial_adapters_title": "Dstfl.-Adapter entfernen",
+      "remove_vial_adapters_info": "Schrauben Sie die Dstfl.-Adapter ab und entsorgen Sie diese vorschriftsmäßig."
+    },
+    "SEARCH_AND_CONNECT": {
+      "action_connect": "CONNECT",
+      "search_and_connect_title": "Verbindung wird hergestellt"
+    },
+    "SETTINGS_FACTORY_RESET_DONE": {
+      "settings_factory_done_title": "Factory data reset complete",
+      "text_pump_unpaired": "Pump unpaired"
+    },
+    "COMMUNICATION_KEY": {
+      "communication_key_title": "Kommunikationsschlüssel",
+      "communication_key_info": "Verwenden Sie den nachfolgenden QR-Code, wenn Sie durch ein NeuroDerm-Produkt dazu aufgefordert werden."
+    },
+    "TROUBLESHOOTING": {
+      "troubleshooting_title": "Troubleshooting",
+      "guidance_title": "Video-Tutorials",
+      "guidance_message": "Wählen Sie eine Aktion aus.",
+      "troubleshooting_videos_title": "Video-Tutorials",
+      "troubleshooting_text": "Troubleshooting",
+      "video_title_pausing_treatment": "Unterbrechung der Behandlung",
+      "video_title_resuming_treatment": "Wiederaufnahme der Behandlung",
+      "video_title_cleaning_infusion_sites": "Reinigung der Infusionsstelle",
+      "video_title_identifying_infusion_sites": "Wahl einer Infusionsstelle",
+      "video_title_inserting_cannulas": "Setzen der Kanülen",
+      "video_title_verifying_treatment_status": "Überprüfung des Behandlungsstatus"
+    },
+    "LOG_SCREEN": {
+      "log_export_title": "Export logs to userspace",
+      "log_export_message": "*** Download to PC: adb.exe pull sdcard/NEURODERM/LOG  \n** Debug logs are ID\u0027s \u003e\u003d 500",
+      "log_export_button": "Export",
+      "log_cancel_button": "Cancel",
+      "log_filter_title": "Choose filter type",
+      "log_filter_message": "*** Filter by log type  \n** Filter by custom text",
+      "log_log_type_button": "Log type",
+      "log_custom_text_button": "Custom text",
+      "log_filter_type_title": "Filter by log type",
+      "log_filter_button": "Filter",
+      "log_filtering_progress": "Filtering in progress…",
+      "log_clear_filter_button": "Clear filter",
+      "log_clear_filter_button_types": "Clear types",
+      "log_clear_filter_button_groups": "Clear groups",
+      "log_back_button": "Back",
+      "log_filter_text_title": "Filter by text",
+      "log_filter_text_message": "* Can filter by a part of the text",
+      "log_delete_title": "Select desired action",
+      "log_delete_message": "*** Clearing the log list will not delete the database file ***",
+      "log_delete_list_button": "Clear list",
+      "log_delete_database_button": "Delete database",
+      "log_export_started": "Log export started.",
+      "log_export_success": "Log export success.",
+      "logs_cleared": "Logs cleared.",
+      "logs_database_deleted": "Database deleted.",
+      "log_delete_button": "Delete",
+      "log_filtering_error_title": "Filtering error",
+      "log_filtering_error_message": "There are no log items with the given filter…",
+      "log_exporting_title": "Bitte warten",
+      "log_exporting_info": "Exporting saved logs…"
+    },
+    "FILL_FLOW_RECONNECTION_SCREEN": {
+      "fill_flow_reconnection_title": "Pumpe wird gesucht"
+    },
+    "LOW_LEVEL_API_SCREEN": {
+      "header": "Header",
+      "ble_test_screen_title": "Ble Test"
+    },
+    "PUMP_LOG_SCREEN": {
+      "pump_log_filter_types_title": "Choose filter type",
+      "pump_log_filter_types_message": "Filter by log group (log code)  \nFilter by log type ([TYPE]…)",
+      "pump_log_filter_types_group": "Groups",
+      "pump_log_filter_types_type": "Types"
+    },
+    "DISCLAIMER_SCREEN": {
+      "text_mandatory_disclaimer": "WARNUNG: Die folgenden Anzeigen der Kontrollstation erinnern Sie an die wichtigsten Schritte, die für das Einrichten einer neuen Behandlung erforderlich sind. Ziehen Sie jedes Mal, wenn Sie die Kontrollstation verwenden, auch bitte das Benutzerhandbuch zurate. So sorgen Sie dafür, dass Sie sie vorschriftsmäßig und sicher verwenden."
+    },
+    "T_H_SCREEN": {
+      "text_treatment_h_title": "Behandlungshistorie einsehen",
+      "text_treatment_date": "Treatment dates",
+      "text_inactive_treatment_duration": "Dauer der inaktiven Behandlung",
+      "text_treatment_started": "Behandlungsbeginn",
+      "text_med_delivered": "Abgegebenes Medikament",
+      "text_active_regimen": "Aktives Schema",
+      "th_text_delivered_levodopa": "mg of levodopa",
+      "th_text_dosage_unit_day": "mg/Tag",
+      "th_text_dosage_unit_night": "mg/Nacht",
+      "th_text_no_data": "Keine Daten",
+      "text_th_select_date": "Verwenden Sie die Tasten \"Weiter\" und \"Zurück\", um zwischen den Behandlungen zu navigieren.",
+      "th_text_run_dates_now": "- now",
+      "th_text_hours": "Stunde(n)",
+      "th_text_minutes": "Minute(n)",
+      "th_qr_code": "QR-Code"
+    },
+    "ENTER_PAIRING_PIN": {
+      "enter_pairing_pin_tittle": "PIN eingeben"
+    },
+    "PRIVACY_POLICY": {
+      "privacy_policy_content": "Weitere Informationen darüber, wie wir Daten erfassen, finden Sie in unseren Datenschutzbestimmungen unter  https://neuroderm.com/yurway-privacy-policy."
+    }
+  },
+  "dialogs": {
+    "FW_VERSION": {
+      "device_fw_version_title": "Gerät muss aktualisiert werden (Update)",
+      "device_fw_version_content": "Bitte wenden Sie sich an den Kundendienst, um das Problem zu melden."
+    },
+    "CS_CONFIG_MISMATCH": {
+      "config_file_version_title": "Konfigurationsdatei stimmt nicht überein",
+      "config_file_version_info": "Bitte wenden Sie sich an den Kundendienst, um das Problem zu melden."
+    },
+    "PUMP_COMMUNICATION_VERSION": {
+      "pump_pairing_version_fail_title": "Inkompatibilität der Versionen",
+      "pump_pairing_version_fail_content": "Inkompatible Versionen verhindern den Kopplungsvorgang. Bitte wenden Sie sich an den Kundendienst."
+    },
+    "PAIR_FAILED": {
+      "ftu_not_paired_title_alarm": "Kommunikationsfehler",
+      "ftu_not_paired_info_alarm": "Bitte versuchen Sie erneut, die Geräte zu koppeln. Falls das Problem weiterhin besteht, wenden Sie sich bitte an den Kundendienst."
+    },
+    "PUMP_NOT_DETECTED": {
+      "ftu_no_pump_title_alarm": "Keine Pumpe erkannt",
+      "ftu_no_pump_info_alarm": "Die Kontrollstation erkennt die Pumpe nicht. Bitte versuchen Sie es erneut. Falls das Problem weiterhin besteht, wenden Sie sich bitte an den Kundendienst."
+    },
+    "REGIMEN_UNSAVED_CHANGES": {
+      "regime_segment_not_saved_message": "Bitte speichern Sie Ihre Änderungen",
+      "regime_segment_not_saved_title": "Wenn Sie nicht speichern, können alle Ihre Änderungen verloren gehen. Achtung: Diese Aktion kann nicht rückgängig gemacht werden."
+    },
+    "DIALOG_DOSE_BELOW_MINIMUM": {
+      "regime_segment_wrong_flow_value_title_min": "Daily dose is below minimum",
+      "regime_segment_wrong_flow_value_min": "The minimum allowed dose is 360 mg/Day.\nPlease adjust the segments before saving."
+    },
+    "REGIMEN_FLOW_HIGH": {
+      "regime_segment_flow_value_grader_title": "Flow rate value is too high",
+      "regime_segment_flow_value_grader_content": "Maximum flow rate value \nis 0.75 ml/hr per hour. \nPlease adjust the values."
+    },
+    "REGIMEN_FLOW_LOW": {
+      "regime_segment_flow_value_lower_title": "Flow rate value is too low",
+      "regime_segment_flow_value_lower_content": "Minimum allowed flow rate value \nis 0.08 ml/hr. \nPlease adjust the values"
+    },
+    "FLOW_VALUES_NOT_CORRECT": {
+      "regime_segment_flow_value_title": "Der Wert der Durchflussrate ist nicht korrekt",
+      "regime_segment_flow_value_content": "Bitte passen Sie Ihre Werte entsprechend an."
+    },
+    "SAME_TIME": {
+      "regime_segment_same_time_error": "You can\u0027t have the same Start and \nEnd time values for a segment.\nPlease adjust the values.",
+      "regime_segment_same_time_error_title": "Identical time values are not allowed"
+    },
+    "MAX_FLOW": {
+      "regime_segment_wrong_flow_value_title": "Daily dose is above maximum",
+      "regime_segment_wrong_flow_value": "The maximum allowed dose is 720 mg/Day.\nPlease adjust the segments before saving."
+    },
+    "MOVIE_MISSING": {
+      "movie_no_video_title": "Videodatei nicht gefunden",
+      "movie_no_video_content": "Das Video konnte nicht abgespielt werden. Wenn Sie Hilfe benötigen, wenden Sie sich bitte an den Kundendienst."
+    },
+    "PUMP_DISCONNECTED": {
+      "alert_pump_disconnected_title": "Pumpe ist nicht verbunden",
+      "alert_pump_disconnected_content": "Bitte verbinden Sie die Pumpe erneut und versuchen Sie es noch einmal."
+    },
+    "PUMP_HAS_ACTIVE_REGIMEN": {
+      "ftu_basal_profile_old_pump_dialog_title": "Ihre Pumpe verfügt über ein aktives Dosierungsschema",
+      "regimen_change_message": "Um die Einstellungen des Dosierungsschemas zu ändern, gehen Sie bitte zum Menü -\u003e Dosierungsschema-Einstellungen"
+    },
+    "PERSONAL_PUMP": {
+      "ftu_pump_pair_override_personal_title": "Sind Sie sicher, dass Sie die aktuelle Pumpe ersetzen wollen?",
+      "ftu_pump_pair_override_personal_info": "Sie können nur über eine (1) persönliche Pumpe verfügen."
+    },
+    "UNEXPECTED_DECOUPLE_FTU": {
+      "alert_type_pump_decoupled_general_title_ftu": "Pumpe unerwartet entfernt",
+      "alert_type_pump_decoupled_general_info_ftu": "Bitte setzen Sie die Pumpe in die Kontrollstation ein, um die Einrichtung abzuschließen."
+    },
+    "UNEXPECTED_DECOUPLE": {
+      "alert_type_pump_decoupled_general_title": "Nicht gespeicherte Änderungen des Dosierungsschemas",
+      "alert_type_pump_decoupled_general_info": "Es wurden keine Änderungen gespeichert, da die Pumpe unerwartet entfernt wurde. Zum Bearbeiten des Dosierungsschemas gehen Sie bitte zum Menü -\u003e Dosierungsschema-Einstellungen."
+    },
+    "PUMP_CONNECTION_LOST": {
+      "fill_flow_disconnected_warning_title": "Verbindung zur Pumpe unterbrochen",
+      "fill_flow_disconnected_warning_info": "Die Kommunikation zwischen der Kontrollstation und der Pumpe wurde unterbrochen. Bitte versuchen Sie, die Verbindung erneut herzustellen oder beenden Sie den täglichen Vorbereitungsvorgang. Falls das Problem weiterhin besteht, wenden Sie sich bitte an den Kundendienst.",
+      "fill_flow_disconnected_warning_action_abort": "Stopp",
+      "fill_flow_disconnected_warning_action_reconnect": "Erneut verbinden"
+    },
+    "PUMP_WRONG_STATE": {
+      "fill_flow_wrong_pump_state_title": "Das System kann den Befüllungsvorgang des Medikaments nicht fortsetzen",
+      "fill_flow_wrong_pump_state_info": "Bitte brechen Sie den aktuellen Vorgang ab und starten Sie erneut. Wenn das Problem weiterhin besteht, wenden Sie sich bitte an den Kundendienst.",
+      "fill_flow_wrong_pump_state_action_abort": "Vorgang abbrechen"
+    },
+    "FILL_FLOW_GO_BACK": {
+      "dialog_on_back_title": "Sind Sie sicher, dass Sie den täglichen Vorbereitungsvorgang verlassen wollen?",
+      "dialog_on_back_message": "Wenn Sie zurückgehen, wird der aktuelle Vorgang gestoppt."
+    },
+    "UNPAIR_PUMP": {
+      "settings_connected_unpair_dialog_title": "Are you sure you want to unpair the pump?",
+      "settings_connected_unpair_dialog_info": "Once you unpair the pump, \nall your pump data will be lost."
+    },
+    "EDIT_DATE_TIME": {
+      "dialog_time_edit_title": "Date and time cannot be adjusted \nwhile the delivery is ON",
+      "dialog_time_edit_content": "Bitte warten Sie, bis die Behandlung abgeschlossen ist oder stoppen Sie die Abgabe durch die Pumpe manuell."
+    },
+    "DELIVERY_STARTED": {
+      "dialog_delivery_started_title": "Die Pumpe gibt das Medikament ab. Bitte schließen Sie die Behandlungsvorbereitungen ab."
+    },
+    "REGIMEN_EDIT_DELIVERY_ON": {
+      "alert_regimen_edit_title": "Das Dosierungsschema kann nicht geändert werden, während die Abgabe LÄUFT",
+      "alert_regimen_edit_content": "Bitte warten Sie, bis die Behandlung abgeschlossen ist oder stoppen Sie die Abgabe durch die Pumpe manuell."
+    },
+    "ALERT_SETUP_PUMP": {
+      "alert_setup_pump_title": "Pumpe nicht vollständig eingerichtet",
+      "alert_setup_pump_info": "Bitte richten Sie Ihre Pumpe vollständig ein, bevor Sie sie benutzen. Bitte wenden Sie sich an den Kundendienst, um das Problem zu melden."
+    },
+    "TRY_TO_PAIR_NEW_PUMP": {
+      "dialog_alert_title_pair_new_pump": "Versuchen Sie, eine neue Pumpe zu koppeln?",
+      "dialog_alert_pair_new_pump_info": "Falls das Problem weiterhin besteht, wenden Sie sich bitte an den Kundendienst."
+    },
+    "PUMP_TURNED_OFF": {
+      "dialog_turned_off_pump_title": "Pumpe ist ausgeschaltet",
+      "dialog_turned_off_pump_info": "Insert pump into the Control Station \nto turn the pump on."
+    },
+    "PUMP_TURNING_OFF": {
+      "dialog_turn_off_pump_title": "Sind Sie sicher, dass Sie die Pumpe ausschalten möchten?",
+      "dialog_turn_off_pump_info": "Durch das Ausschalten der Pumpe wird Ihre Behandlung unterbrochen.",
+      "dialog_turn_off_pump_panel": "Turning off the pump will \ninterrupt your therapy."
+    },
+    "ALERT_REGIMEN_UPLOAD_FAILED": {
+      "alert_type_regimen_upload_failed_title": "Ihre Dosierungsschema-Einstellungen wurden nicht gespeichert",
+      "alert_type_regimen_upload_failed_info": "Bitte versuchen Sie erneut, das Dosierungsschema einzustellen."
+    },
+    "GPS_DIALOG": {
+      "splash_gps_title": "GPS deaktiviert",
+      "splash_gps_message": "Für die Durchführung des BLE-Scans muss das GPS aktiviert sein."
+    },
+    "DOWNLOAD_PUMP_LOG": {
+      "treatment_history_dialog_cancel_download_title": "Sind Sie sicher, dass Sie zurückgehen möchten?",
+      "treatment_history_dialog_cancel_download_info": "Wenn Sie zurückgehen, wird der Download-Vorgang des aktuellen Protokolls angehalten.",
+      "treatment_history_dialog_cancel_action_yes": "STOPP",
+      "treatment_history_dialog_cancel_action_no": "ABBRECHEN"
+    },
+    "DOWNLOAD_PUMP_LOG_FINISHED": {
+      "treatment_history_dialog_finished_download_title": "Download finished",
+      "treatment_history_dialog_finished_download_info": "Pump logs successfully downloaded."
+    },
+    "PUMP_EXPIRED_FTU": {
+      "pump_ftu_expired_dialog_title": "Sie benutzen die Pumpe nun schon seit %s Jahren",
+      "pump_expired_ftu_dialog_info": "WARNUNG: Die Pumpe hat das Ende ihrer Lebensdauer erreicht und erbringt nicht mehr ihre volle Leistung. Bitte wenden Sie sich an den Kundendienst, um Anweisungen zur Entsorgung und Ersatz zu erhalten."
+    },
+    "CS_EXPIRED_FTU": {
+      "cs_ftu_expired_dialog_title": "Sie benutzen die Kontrollstation nun schon seit %s Jahren",
+      "cs_expired_ftu_dialog_info": "WARNUNG: Die Kontrollstation hat das Ende ihrer Lebensdauer erreicht und erbringt nicht mehr ihre volle Leistung. Bitte wenden Sie sich an den Kundendienst, um Anweisungen zur Entsorgung und Ersatz zu erhalten.",
+      "cs_pump_ftu_expired_dialog_title": "Sie benutzen die Kontrollstation und die Pumpe nun schon seit %s Jahren",
+      "cs_pump_expired_ftu_dialog_info": "WARNUNG: Die Kontrollstation und die Pumpe haben das Ende ihrer Lebensdauer erreicht und erbringen nicht mehr ihre volle Leistung. Bitte wenden Sie sich an den Kundendienst, um Anweisungen zur Entsorgung und Ersatz zu erhalten.",
+      "pump_internal_charger_title": "Pumpe lädt nicht",
+      "pump_internal_charger_title_content": "Das kabellose Laden wurde aufgrund der hohen Pumpentemperatur abgebrochen. Bitte wenden Sie sich an den Kundendienst.",
+      "text_title_dialog_unexpected_decouple": "Pumpe unerwartet entfernt",
+      "text_content_dialog_unexpected_decouple": "Der Vorgang wird gestoppt."
+    },
+    "TH_QR_CODE": {
+      "th_qr_code_title": "",
+      "th_qr_code_info": ""
+    }
+  },
+  "alerts": {
+    "STRINGS_FOR_ALERT_TYPES": {
+      "alert_info_default": "ID %s | NO TREATMENT FOR %s",
+      "alert_info_default_id_only": "ID %s ",
+      "alert_pump_hw_malfunction_info": "ID %s | NO TREATMENT FOR %s \nHW ERROR ID %d",
+      "alert_cs_hw_malfunction_info": "ID %s \nHW ERROR ID %s",
+      "alert_info_communication_failed": "ID %s\nCOMM ERROR ID: %s (%s)"
+    },
+    "PUMP_MALFUNCTION": {
+      "alert_title_pump_malfunction": "Störung der Pumpe",
+      "alert_description_pump_malfunction": "Das Medikament wird nicht mehr abgegeben. Bitte wenden Sie sich an den Kundendienst."
+    },
+    "PUMP_BATTERY_CRITICAL": {
+      "alert_title_pump_battery_critical": "Pumpen-Akku ist leer",
+      "alert_description_pump_battery_critical": "Das Medikament wird nicht mehr abgegeben. Setzen Sie die Pumpe in die Kontrollstation ein, um den Akku zu aufzuladen."
+    },
+    "EMPTY_DRUG": {
+      "alert_title_empty_drug": "Medikament ist leer",
+      "alert_description_empty_drug": "Das Medikament wird nicht mehr abgegeben. Tippen Sie die Schaltfläche BEHANDLUNG VORBEREITEN, um eine neue Behandlung vorzubereiten.",
+      "alert_description_empty_drug_filling_interrupted": "Beim Befüllungsvorgang ist etwas schiefgelaufen. Tippen Sie auf die Schaltfläche BEHANDLUNG VORBEREITEN, um eine neue Behandlung vorzubereiten."
+    },
+    "DP_EXPIRED_NEED_REPLACEMENT": {
+      "alert_title_pump_medication_expired": "Behandlungszyklus beendet",
+      "alert_description_pump_medication_expired": "Das Medikament wird nicht mehr abgegeben.\nTippen Sie auf die Schaltfläche BEHANDLUNG VORBEREITEN, um eine neue Behandlung vorzubereiten."
+    },
+    "BLOCKAGE_ALARM": {
+      "alert_title_pump_blockage_alarm": "Blockierung erkannt",
+      "alert_description_pump_blockage_alarm": "Das Medikament wird nicht mehr abgeben. Tippen Sie auf die Schaltfläche BEHANDLUNG VORBEREITEN, um eine neue Behandlung vorzubereiten. Falls das Problem weiterhin besteht, wenden Sie sich bitte an den Kundendienst.",
+      "alert_description_pump_blockage_alarm_full": "Das Medikament wird nicht mehr abgegeben. Tippen Sie auf die Schaltfläche BEHANDLUNG VORBEREITEN. Falls das Problem weiterhin besteht, kontaktieren Sie den Kundendienst."
+    },
+    "DP_DISCONNECTED": {
+      "alert_title_pump_disconnected": "Kartusche nicht verbunden",
+      "alert_description_pump_disconnected": "Verbinden Sie die Kartusche erneut mit der Pumpe, um den Vorgang fortzusetzen.",
+      "alert_description_pump_disconnected_no_fill_flow": "Das Medikament wird nicht mehr abgegeben. Verbinden Sie die Kartusche erneut mit der Pumpe."
+    },
+    "START_DELIVERY_HIGH": {
+      "alert_title_start_delivery_high": "Behandlung zu lange unterbrochen",
+      "alert_description_start_delivery_high": "Stellen Sie sicher, dass die Schläuche an die Kanülen angeschlossen sind. Drücken Sie dann die Pumpentaste, um die Behandlung fortzusetzen."
+    },
+    "START_NEW_TREATMENT": {
+      "alert_title_start_treatment": "Start new treatment",
+      "alert_description_start_treatment": "You have completed the treatment cycle. \nTap the PREPARE TREATMENT button \nto start a new treatment."
+    },
+    "LOW_TREATMENT_PAUSED": {
+      "alert_title_low_treatment_paused": "Behandlung unterbrochen",
+      "alert_description_treatment_paused": "Stellen Sie sicher, dass die Schläuche an die Kanülen angeschlossen sind. Drücken Sie dann die Pumpentaste, um die Behandlung fortzusetzen."
+    },
+    "LOW_PUMP_BATTERY": {
+      "alert_title_pump_battery_low": "Pumpen-Akku ist schwach",
+      "alert_description_pump_battery_low": "Setzen Sie die Pumpe in die Kontrollstation ein, um sie aufzuladen."
+    },
+    "LOW_DRUG_VOLUME": {
+      "alert_title_pump_cartridge_low_volume": "Die Medikamentenabgabe ist bald beendet",
+      "alert_description_pump_cartridge_low_volume": "Tippen Sie auf die Schaltfläche BEHANDLUNG VORBEREITEN, um eine neue Behandlung vorzubereiten"
+    },
+    "HIGH_CS_MALFUNCTION": {
+      "alert_title_cs_malfunction_high": "Störung der Kontrollstation",
+      "alert_description_cs_malfunction_high": "Bitte wenden Sie sich an den Kundendienst, um das Problem zu melden."
+    },
+    "FILL_PROCESS_INTERRUPTED": {
+      "alert_title_fill_process_interrupted": "Vorgang unterbrochen",
+      "alert_description_fill_process_interrupted": "Um die Befüllung fortzusetzen, setzen Sie die Pumpe in die Kontrollstation ein. Vergewissern Sie sich, dass die Kartusche an die Pumpe angeschlossen ist."
+    },
+    "FILL_PROCESS_INCOMPLETE": {
+      "alert_title_fill_process_incomplete": "Vorgang unvollständig",
+      "alert_description_fill_process_incomplete": "Tippen Sie auf die Schaltfläche VORGANG FORTSETZEN, um den Durchfluss fortzusetzen."
+    },
+    "BLE_COMMUNICATION_FAILURE": {
+      "alert_title_ble_communication_failure": "Bluetooth Verbindungsproblem",
+      "alert_description_ble_communication_failure": "Es scheint ein Problem mit der Bluetooth-Verbindung zu geben. Um den Vorgang fortzusetzen, versuchen Sie es bitte erneut. Falls das Problem weiterhin besteht, wenden Sie sich bitte an den Kundendienst."
+    },
+    "TIME_MISMATCH_ALERT": {
+      "alert_title_time_mismatch": "Überprüfung der Uhrzeit",
+      "alert_description_time_mismatch": "Uhrzeit der Kontrollstation: %s.\nBitte bestätigen Sie die Uhrzeit oder bearbeiten Sie die Zeit- und Datumseinstellungen.",
+      "alert_info_time_pump_time": "PUMP: ",
+      "alert_info_time_station_time": "STATION: "
+    },
+    "PUMP_FAILED": {
+      "alert_title_pump_failed": "Störung der Pumpe",
+      "alert_description_pump_failed": "A problem occurred with your pump. Please contact Customer Care."
+    },
+    "CPU_TEMP_HIGH": {
+      "alert_cpu_high_title": "Hohe Temperatur der Kontrollstation",
+      "alert_cpu_high_content": "Das Gerät funktioniert möglicherweise nicht richtig. Bitte wenden Sie sich an den Kundendienst, um das Problem zu melden."
+    },
+    "CPU_TEMP_CRITICAL": {
+      "alert_cpu_critical_title": "Temperatur der Kontrollstation ist kritisch",
+      "alert_cpu_critical_content": "Das Gerät schaltet sich in Kürze ab."
+    },
+    "W_CHARGER_TEMP": {
+      "alert_wcharge_temp_high_title": "Aufgrund der hohen Temperatur wird das kabellose Laden gestoppt",
+      "alert_wcharge_temp_high_content": "Seien Sie bitte vorsichtig, wenn Sie die Pumpe berühren"
+    },
+    "W_CHARGER_ERROR": {
+      "alert_wcharge_error_title": "Ladefehler Pumpe",
+      "alert_wcharge_error_content": "Stellen Sie sicher, dass die Pumpe richtig eingesetzt ist. Falls das Problem weiterhin besteht, wenden Sie sich bitte an den Kundendienst."
+    },
+    "CS_BATTERY_CHARGER_TEMP": {
+      "alert_battery_temp_title": "Hohe Temperatur des internen Akkus",
+      "alert_battery_temp_content": "Aufgrund der hohen Temperatur des internen Akkus wechselt das Gerät in den Ruhemodus."
+    },
+    "CS_BATTERY_CHARGER_FAULTY": {
+      "alert_battery_faulty_title": "Akku der Kontrollstation defekt oder nicht erkannt",
+      "alert_battery_faulty_content": "Bitte wenden Sie sich an den Kundendienst, um das Problem zu melden."
+    },
+    "CS_BATTERY_CHARGER_STATUS": {
+      "alert_battery_low_title": "Akku der Kontrollstation ist schwach",
+      "alert_battery_low_content": "Schließen Sie die Kontrollstation an den Netzadapter an, bevor Sie die Behandlung für den nächsten Tag vorbereiten. Falls das Problem weiterhin besteht, wenden Sie sich bitte an den Kundendienst.",
+      "alert_title_pump_wrong_data": "Pumpe hat falsche Daten",
+      "alert_description_pump_wrong_data": "Die Pumpe hat falsche Daten. Bitte versuchen Sie es erneut. Falls das Problem weiterhin besteht, wenden Sie sich bitte an den Kundendienst."
+    },
+    "VIDEO_FILE_CORRUPTED": {
+      "video_file_corrupted_title": "Videodatei beschädigt",
+      "video_file_corrupted_content": "Das Video konnte nicht abgespielt werden. Wenn Sie Hilfe benötigen, wenden Sie sich bitte an den Kundendienst."
+    },
+    "REGIMEN_PIN_CORRUPTED": {
+      "regimen_pin_corrupted_title": "Der PIN-Code für das Schema ist fehlerhaft",
+      "regimen_pin_corrupted_content": "Bitte wenden Sie sich an den Kundendienst."
+    },
+    "LANGUAGE_FILE_INCOMPATIBLE": {
+      "language_file_incompatible_title": "Sprache nicht kompatibel",
+      "language_file_incompatible_content": "Inkompatible Sprache aufgrund eines Fehlers in der gespeicherten Datei. Bitte wenden Sie sich an den Kundendienst."
+    }
+  },
+  "arrays": {
+    "startup_menu_items": [
+      "Datum und Uhrzeit einstellen",
+      "Pumpe koppeln",
+      "Dosierungsschema einrichten"
+    ],
+    "prepared_startup_menu_items": [
+      "Datum und Uhrzeit sind eingestellt",
+      "Pumpe ist verbunden",
+      "Dosierungsschema einrichten"
+    ]
+  }
+}

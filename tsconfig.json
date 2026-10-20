@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "allowJs": true,
+    "noEmit": true,
+    "types": [
+      "node",
+      "mocha",
+      "@wdio/globals/types"
+    ]
+  },
+  "include": [
+    "**/*.js",
+  ],
+  "exclude": [
+    "allure-report",
+    "allure-results",
+    "node_modules"
+  ],
+}

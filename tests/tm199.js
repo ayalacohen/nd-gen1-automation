@@ -1,0 +1,228 @@
+// helpers
+import { adbCouplePump, adbDecouplePump } from '../helpers/adbHelpers.js';
+import { clearPumpLogs, connectTwico, disconnectTwico, pressPumpButton, setEncoderDrugValue, verifyLogsContain } from '../helpers/apiHelpers.js';
+import { buildSelectorById, checkAlert, getCachedString, getElementById, isElementDisplayedById, isElementDisplayedByText, waitForVisible, waitWithHeartbeat } from '../helpers/uiHelpers.js';
+
+import { loadStrings } from '../helpers/i18n.js';
+import { logStep, logStepMessage } from '../helpers/logger.js';
+
+// config
+import config from '../helpers/config.js';
+import { flowState, saveState } from '../helpers/flowState.js';
+
+import allureReporter from '@wdio/allure-reporter';
+
+/*
+Precondition:
+Pump in Delivery 
+
+Pump with Medication will stop soon alarm
+*/
+const testKey = "TM-199";
+let preconditionsPassed = false;
+
+describe(`${testKey} - Medication is empty VS Occlusion detected`, () => {
+    const { apiBaseUrl, globalParams } = config;
+    const { portName } = { ...globalParams };
+
+    afterEach(function () {
+    const test = this.currentTest;
+
+    if (!test || test.title === "PRECONDITIONS") return;
+
+    flowState.lastTest = test.title;
+
+    switch (test.state) {
+        case 'passed':
+            flowState.lastSuccess = true;
+            break;
+        case 'failed':
+        case 'pending':
+        default:
+            flowState.lastSuccess = false;
+            break;
+    }
+
+    saveState(flowState);
+
+    logStepMessage("flowState: " + JSON.stringify(flowState, null, 2));
+    });
+
+    after(function () {
+        // If at least one real test was recorded, do nothing
+        if (flowState.lastTest) return;
+
+        // Runner crashed before afterEach
+        flowState.lastTest = "UNKNOWN";
+        flowState.lastSuccess = false;
+
+        saveState(flowState);
+
+        logStepMessage("flowState: " + JSON.stringify(flowState, null, 2));
+    });
+
+    it("PRECONDITIONS", async () => {
+        try {
+            allureReporter.addLabel('type', 'preconditions');
+            allureReporter.addLabel('testKey', testKey);
+            await logStep('Load strings for selected language', async () => {
+                loadStrings();
+            });
+            await logStep('Connect TWICO', async () => {
+                await connectTwico(apiBaseUrl, portName);
+            });
+
+            await logStep('Click GET STARTED', async () => {
+                if (await isElementDisplayedByText(getCachedString('common.cmn_get_started'), 20000)) {
+                    logStepMessage("Click GET STARTED");
+                    const getStarted = await getElementById('tvThird');
+                    await getStarted.click();
+                    await browser.pause(2000);
+                } else {
+                    logStepMessage("Skipping this step...");
+                }
+            });
+
+            await logStep('Pause treatment', async () => {
+                if (await isElementDisplayedByText(getCachedString('screens.HOME.home_screen_medication_delivery_on'), 5000)) {
+                    adbCouplePump();
+                    await browser.pause(5000);
+                    await waitForVisible(
+                        buildSelectorById('tvAlertTitle'),
+                        'alerts.LOW_TREATMENT_PAUSED.alert_title_low_treatment_paused',
+                        10000,
+                        300,
+                        true
+                    );
+                    logStepMessage("✅ Alert TREATMENT PAUSED shown [alerts.LOW_TREATMENT_PAUSED.alert_title_low_treatment_paused] upper case");
+
+                    if (await isElementDisplayedById('tvDismissAlert', 10000)) {
+                        const audioBtn = await getElementById('tvDismissAlert');
+                        await audioBtn.click();
+                        await browser.pause(200);
+                    }
+                } else {
+                    logStepMessage("Skipping this pause step...Treatment already paused");
+                }
+            });
+
+            await logStep('Clear pump logs', async () => {
+                await clearPumpLogs(apiBaseUrl);
+            });
+
+            await logStep('Simulate  Medication will stop soon alarm', async () => {
+                await setEncoderDrugValue(apiBaseUrl, 1000);
+            });
+
+            await logStep('Decouple and press Pump button', async () => {
+                adbDecouplePump();
+                await browser.pause(10000);
+                await pressPumpButton(apiBaseUrl);
+            });
+
+            preconditionsPassed = true;
+        } catch (err) {
+            throw new Error(`PRECONDITION FAILED: ${err.message}`);
+        }
+  });
+
+  it(`${testKey}`, async function () {
+    try {
+        allureReporter.addLabel('testKey', testKey);
+        if (!preconditionsPassed) {
+            // mark test as skipped in Mocha
+            this.skip(); 
+        }
+
+        await logStep('Step 1 - Check Medication will stop soon alarm', async () => {
+            await step1(apiBaseUrl);
+        });
+
+        await logStep('Step 2 - Wait for several microsteps and check Medication empty alarm', async () => {
+            await step2(apiBaseUrl);
+        });
+
+        await logStep('Couple the pump and update encoder drug value back to 17000', async () => {
+            adbCouplePump();
+            await browser.pause(7000);
+
+            await setEncoderDrugValue(apiBaseUrl, 17000);
+
+            if (await isElementDisplayedById('tvDismissAlert', 10000)) {
+                const audioBtn = await getElementById('tvDismissAlert');
+                await audioBtn.click();
+            }
+        });
+
+        await logStep('Disconnect TWICO', async () => {
+            await disconnectTwico(apiBaseUrl, portName);
+        });
+
+        logStepMessage(`✅ ${testKey} completed successfully`);
+    } catch (err) {
+        console.error(`❌ ${testKey} failed:`, err.message || err, "error");
+        throw err;
+    }
+  });
+});
+
+async function step1(apiBaseUrl) {
+    logStepMessage("▶️ Step 1");
+    await waitForVisible(
+        buildSelectorById('tvAlertTitle'),
+        'alerts.LOW_DRUG_VOLUME.alert_title_pump_cartridge_low_volume',
+        10000,
+        300,
+        true
+    );
+
+    logStepMessage("✅ Alert MEDICATION WILL STOP SOON shown [alerts.LOW_DRUG_VOLUME.alert_title_pump_cartridge_low_volume] upper case");
+
+    await checkAlert(
+        'alerts.LOW_DRUG_VOLUME.alert_title_pump_cartridge_low_volume',
+        'alerts.LOW_DRUG_VOLUME.alert_description_pump_cartridge_low_volume',
+        {
+            localizedTemplateKey: 'alerts.STRINGS_FOR_ALERT_TYPES.alert_info_default',
+            requiredId: '23'
+        }
+    );
+
+    // Alarms ON: ID23
+    // Alarms: 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1 2 2 2 2
+    await verifyLogsContain(apiBaseUrl, `Alarms: 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1 2 2 2 2||[Alarm] Priority ID: 23\``, 5000, "error");
+    logStepMessage("✅ Step 1");
+}
+
+async function step2(apiBaseUrl) {
+    logStepMessage("▶️ Step 2");
+    await waitWithHeartbeat(120000); // 2mn enough ? instead of 2.5 mn
+
+    await waitForVisible(
+        buildSelectorById('tvAlertTitle'),
+        'alerts.EMPTY_DRUG.alert_title_empty_drug',
+        10000,
+        300,
+        true
+    );
+
+    logStepMessage("✅ Alert MEDICATION IS EMPTY shown [alerts.EMPTY_DRUG.alert_title_empty_drug]] upper case");
+
+    await checkAlert(
+        'alerts.EMPTY_DRUG.alert_title_empty_drug',
+        'alerts.EMPTY_DRUG.alert_description_empty_drug',
+        {
+            localizedTemplateKey: 'alerts.STRINGS_FOR_ALERT_TYPES.alert_info_default',
+            requiredId: '3'
+        }
+    );
+
+    if (await isElementDisplayedById('tvDismissAlert', 10000)) {
+        const audioBtn = await getElementById('tvDismissAlert');
+        await audioBtn.click();
+    }
+
+    // Alarms ON: ID3 and ID23
+    // Alarms: 2 2 1 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1 2 2 2 2
+    await verifyLogsContain(apiBaseUrl, `Alarms: 2 2 1 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1 2 2 2 2||[Alarm] Priority ID: 3\``, 5000, "error");
+    logStepMessage("✅ Step 2");
+}

@@ -1,0 +1,60 @@
+{
+  "version": 21,
+  "sub_version": 1,
+  "bleScanInterval": 5,
+  "bleScanTimeSeconds": 30,
+  "bleScanWindow": 5,
+  "connectionSupervisionTimeoutSeconds": 20,
+  "developerMode": true,
+  "infusionSetSupport": {
+    "name": "Neria Guard 80cm",
+    "primingVolume": 15
+  },
+  "languagesSupported": {
+    "en_US": "English - US",
+    "en_150": "English - Europe",
+    "de_DE": "Deutsch - German"
+  },
+  "maxPumpCsTimeDifferenceSeconds": 1800,
+  "processIncompleteAlarmSeconds": 300,
+  "wc_battery_threshold_off": 100,
+  "wc_battery_threshold_on": 60,
+  "wc_battery_threshold_timeout": 300000,
+  "wc_pause_time": 15000,
+  "keep_alive_timeout": 1000,
+  "override_clock_sync_rules_time_seconds": 31536000,
+  "regimens": {
+    "night_rate": 80,
+    "day_duration": 18,
+    "total_night_dose_ui": 30,
+    "lookup_table_tdd": [
+      720,
+      670,
+      620,
+      570,
+      520,
+      470,
+      420,
+      370
+    ],
+    "lookup_table_dfr": [
+      640,
+      590,
+      550,
+      500,
+      450,
+      410,
+      360,
+      320
+    ]
+  },
+  "volume_alarm_percentage": 88,
+  "volume_video_percentage": 100,
+  "AllowedYearsOfUsage": 3,
+  "APKHighWCTemperature": 65,
+  "APKWCHysteresis": 5,
+  "pathAlarm": "/data/neuroderm/alarm",
+  "pumpBatteryFullHoldTimeout": 0,
+  "HealthcareProfessionalVersion": true,
+  "crc":"37546"
+}

@@ -1,0 +1,47 @@
+# Dependencies
+node_modules/
+
+# Test Results & Reports
+allure-results/
+allure-report/
+
+# Logs
+logs/
+
+# Archive
+archive/
+
+# Test Output
+*.xml
+
+# Generated/Temporary Files
+*.json.bak
+*.tmp
+*.tmp.*
+
+# OS-specific
+.DS_Store
+Thumbs.db
+
+# IDE/Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Environment/Config (if sensitive)
+# .env (uncomment if you use this)
+
+# Flow state
+flowState.json
+
+# Database
+db/
+!db/.gitkeep
+
+# Environment - machine-specific
+.env.local
+.env.*.local
+
+# Xray uploaded runs tracking
+xrayUploadedRuns.json

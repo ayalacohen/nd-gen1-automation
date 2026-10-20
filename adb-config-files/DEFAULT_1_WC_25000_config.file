@@ -1,0 +1,17 @@
+cpu_temperature_hysteresis=2000
+cpu_temperature_high=95000
+cpu_temperature_critical=200000
+sleep_time_msec=10800000
+default_brightness=15
+start_year=2022
+brightness_battery_operated=7
+wc_temperature_hysteresis=10000
+wc_temperature_high=25000
+battery_temperature_hysteresis=2
+battery_temperature_high=45
+sleep_time_ftu_msec=1800000
+sleep_time_mal_msec=120000
+battery_temperature_critical=60
+duration_to_reduce_brightness=300000
+use_default_key=1
+crc=59704
